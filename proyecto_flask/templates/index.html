@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Diagnóstico de Cáncer</title>
+</head>
+<body>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <input type="submit" value="Subir y Analizar">
+    </form>
+
+    {% if plot_url %}
+        <img src="data:image/png;base64,{{ plot_url }}">
+    {% endif %}
+</body>
+</html>
+
